@@ -5,7 +5,8 @@ class Database
 
 	public function __construct() {
 		try {
-			$config = Router::config('database');
+			$config = Router::config('db');
+
 			$this->dbh = new PDO('mysql:host=' . $config['host'] . ';dbname=' . $config['database'], $config['user'], $config['password']);
 			$this->dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 		} catch (Exception $e) {

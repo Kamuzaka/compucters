@@ -43,7 +43,6 @@ class ApiController
 			$idn = new IDNAConvert(array('idn_version'=>2008));
 			$address = strpos($this->data['email_to'], 'xn--') ? $this->data['email_to'] : $idn->encode($this->data['email_to']);
 			$mail->addAddress($address);
-
 			// Тема письма
 			$mail->Subject = $this->data['subject'];
 

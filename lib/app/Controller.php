@@ -9,4 +9,8 @@ class Controller
 			Router::throwError(404, '404 Страница не найдена');
 		}
 	}
+
+	public function redirect($url) {
+		header('Location: ' . '/' . $url . '/');
+	}
 }
