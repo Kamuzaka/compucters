@@ -17,6 +17,11 @@ global $img;
             <h1>#НЕТПАНДЕМИИ</h1>
         </div>
         <br>
+		<?php if (isset($data['success'])): ?>
+            <div class="alert alert-success" role="alert">
+				<?= $data['success'];?>
+            </div>
+		<?php endif;?>
 		<div class="row">
 			<div class="col">
 				<div class="card" style="width: 18rem;">

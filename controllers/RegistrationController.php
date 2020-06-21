@@ -8,7 +8,7 @@ class RegistrationController extends Controller
 			$data['errors'] = $user->validate();
 			if (empty($data['errors'])) {
 				$user->create();
-				$this->render('index');
+				$this->render('news',['success' => 'Вы успешно подписались на рассылку!']);
 			}
 		}
 		$this->render('registration', $data);
