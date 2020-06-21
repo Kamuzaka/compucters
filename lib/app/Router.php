@@ -2,8 +2,7 @@
 class Router
 {
 	public static function config($key) {
-		$data = include_once ROOT . SEP . 'config.php';
-		return isset($data[$key]) ? $data[$key] : [];
+		return include_once ROOT . SEP . 'config_' . $key . '.php';
 	}
 
 	public static function app()

@@ -15,6 +15,6 @@
 			</li>
 		</ul>
 	</div>
-    <a class="nav-link text-light" href="#">Войти</a>
+    <a class="nav-link text-light" href="/auth/">Войти</a>
     <a class="nav-link text-light" href="/registration/">Регистрация</a>
 </nav>

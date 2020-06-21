@@ -7,6 +7,13 @@ class User
 	{
 		$this->fields = $data;
 		$this->db = (new Database())->getConnection();
+
+	}
+
+	public function all() {
+
+		$stmt = $this->db->query("SELECT * FROM user");
+		return $stmt->fetchAll();
 	}
 
 	public function create() {
